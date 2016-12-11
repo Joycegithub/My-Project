@@ -1,0 +1,29 @@
+{
+    "Categories": [
+                   "Trending", "Action", "Adjectives", "Animals",
+                   "Anime", "Art & Design", "Cartoons & Comics",
+                   "Celebrities", "Emotions",
+                   "Fashion & Beauty", "Food & Drink", "Gaming",
+                   "Holidays", "Interests", "Memes", "Movies",
+                   "Music", "Nature", "News & Policitcs", "Reactions",
+                   "Sports", "Transportation", "TV"
+                   ],
+    
+    "Search_Categories": [
+                          "Trending", "Action", "Adjectives", "Animals",
+                          "Anime", "Art+Design", "Cartoons+Comics",
+                          "Celebrities", "Emotions",
+                          "Fashion+Beauty", "Food+Drink", "Gaming",
+                          "Holidays", "Interests", "Memes", "Movies",
+                          "Music", "Nature", "News+Policitcs", "Reactions",
+                          "Sports", "Transportation", "TV"
+                          ],
+    
+    "Categories_Chinese": [
+                           "时下流行", "动作", "形容", "动物",
+                           "动画", "艺术&设计", "动漫", "名人", "情感",
+                           "时尚", "美食", "游戏", "假日", "有趣", "流行", "电影",
+                           "音乐", "自然", "新闻&政治", "反应", "体育", "交通", "电视节目"
+                           ]
+
+}

@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import FunGif
 
 class FunGifTests: XCTestCase {
     
@@ -24,6 +23,18 @@ class FunGifTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let fonts = UIFont.familyNames
+        for font in fonts {
+            print(font)
+        }
+    }
+    
+    func testList() {
+        let manager = TestNW().manager
+        manager?.request("https://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC").validate().response(completionHandler: { (response) in
+            print(response.error)
+        })
     }
     
     func testPerformanceExample() {
