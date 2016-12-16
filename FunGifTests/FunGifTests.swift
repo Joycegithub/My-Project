@@ -26,15 +26,19 @@ class FunGifTests: XCTestCase {
         
         let fonts = UIFont.familyNames
         for font in fonts {
-            print(font)
+            if font.contains("Ameri") {
+                let fonts2 = UIFont.fontNames(forFamilyName: font)
+                print(fonts2)
+            }
         }
+        
+        
     }
     
-    func testList() {
-        let manager = TestNW().manager
-        manager?.request("https://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC").validate().response(completionHandler: { (response) in
-            print(response.error)
-        })
+    func testPlist() {
+        let path = Bundle.main.path(forResource: "Categories", ofType: "plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+        print(data)
     }
     
     func testPerformanceExample() {

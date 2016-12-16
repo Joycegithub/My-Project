@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Smiling</string>
+			<string>Eating</string>
+			<string>Dancing</string>
+			<string>Laughing</string>
+			<string>Crying</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>laughing</string>
+		<key>Category_Name</key>
+		<string>Action</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Black and White</string>
+			<string>Cold</string>
+			<string>Cute</string>
+			<string>Slow Motion</string>
+			<string>Weird</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>blackandwhite</string>
+		<key>Category_Name</key>
+		<string>Adjectives</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Dog</string>
+			<string>Cat</string>
+			<string>Monkey</string>
+			<string>Otter</string>
+			<string>Panda</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>goat</string>
+		<key>Category_Name</key>
+		<string>Animals</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Naruto</string>
+			<string>Pokemon</string>
+			<string>Sailor Moon</string>
+			<string>Trigun</string>
+			<string>One Piece</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>cowboybebop</string>
+		<key>Category_Name</key>
+		<string>Anime</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Loop</string>
+			<string>Glitch</string>
+			<string>Mash Up</string>
+			<string>Sculpture</string>
+			<string>Timelapse</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>typography</string>
+		<key>Category_Name</key>
+		<string>Art &amp; Design</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Adventure Time</string>
+			<string>Archer</string>
+			<string>Regular Show</string>
+			<string>SpongeBob SquarePants</string>
+			<string>The Simpsons</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>minions</string>
+		<key>Category_Name</key>
+		<string>Cartoons &amp; Comics</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Constance Wu</string>
+			<string>emma Stone</string>
+			<string>Jennifer Lawrence</string>
+			<string>Michael Jordan</string>
+			<string>Rashida Jones</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>leonardodicaprio</string>
+		<key>Category_Name</key>
+		<string>Celebrities</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>80s</string>
+			<string>90s</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>80s</string>
+		<key>Category_Name</key>
+		<string>Decades</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Awkward</string>
+			<string>Confused</string>
+			<string>Excited</string>
+			<string>Hungry</string>
+			<string>Tired</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>bored</string>
+		<key>Category_Name</key>
+		<string>Emotions</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Cara Delevingne</string>
+			<string>Chanel</string>
+			<string>Dior</string>
+			<string>Miranda Kerr</string>
+			<string>Victorias Secret</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>dior</string>
+		<key>Category_Name</key>
+		<string>Fashion &amp; Beauty</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Alcohol</string>
+			<string>Bacon</string>
+			<string>Coffee</string>
+			<string>Hotdog</string>
+			<string>Ice cream</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>pizza</string>
+		<key>Category_Name</key>
+		<string>Food &amp; Drink</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>8Bit</string>
+			<string>Gameboy</string>
+			<string>GTAV</string>
+			<string>Supermario</string>
+			<string>The Sims</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>gameboy</string>
+		<key>Category_Name</key>
+		<string>Gaming</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Birthday</string>
+			<string>Christmas</string>
+			<string>New Years</string>
+			<string>Wedding</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>chrismas</string>
+		<key>Category_Name</key>
+		<string>Holidays</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Baby</string>
+			<string>iPhone</string>
+			<string>Work</string>
+			<string>Zombie</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>iphone</string>
+		<key>Category_Name</key>
+		<string>Interests</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Deal With it</string>
+			<string>Fangirling</string>
+			<string>Feels</string>
+			<string>Party Hard</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>letmeloveyou</string>
+		<key>Category_Name</key>
+		<string>Memes</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Harry Potter</string>
+			<string>Star Wars</string>
+			<string>The Shining</string>
+			<string>The Hunger Games</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>thehungergames</string>
+		<key>Category_Name</key>
+		<string>Movies</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Adele</string>
+			<string>Justin Bieber</string>
+			<string>Kate Perry</string>
+			<string>Rihanna</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>rihanna</string>
+		<key>Category_Name</key>
+		<string>Music</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Clouds</string>
+			<string>Forest</string>
+			<string>Sunrise</string>
+			<string>Waterfall</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>clouds</string>
+		<key>Category_Name</key>
+		<string>Nature</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Barack Obama</string>
+			<string>Donald Trump</string>
+			<string>Hillary Clinton</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>hillaryclinton</string>
+		<key>Category_Name</key>
+		<string>News &amp; Policitcs</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Wink</string>
+			<string>High Five</string>
+			<string>Kiss</string>
+			<string>LOL</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>lol</string>
+		<key>Category_Name</key>
+		<string>Reactions</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>NASA</string>
+			<string>Star</string>
+			<string>Space</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>nasa</string>
+		<key>Category_Name</key>
+		<string>Science</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Basketball</string>
+			<string>Soccer</string>
+			<string>Football</string>
+			<string>Skate Boarding</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>basketball</string>
+		<key>Category_Name</key>
+		<string>Sports</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Audi</string>
+			<string>BMW</string>
+			<string>Lanborghini</string>
+			<string>Porsche</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>bmw</string>
+		<key>Category_Name</key>
+		<string>Transportation</string>
+	</dict>
+	<dict>
+		<key>Subcategories</key>
+		<array>
+			<string>All</string>
+			<string>Game Of Thrones</string>
+			<string>The Big Bang Theory</string>
+			<string>The Supernatural</string>
+		</array>
+		<key>Category_Example_Gif_Name</key>
+		<string>gameofthrones</string>
+		<key>Category_Name</key>
+		<string>TV</string>
+	</dict>
+</array>
+</plist>

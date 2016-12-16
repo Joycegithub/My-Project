@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.rootViewController = prepareDrawer()
+        window!.makeKeyAndVisible()
         
         return true
     }
@@ -41,6 +42,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    var drawerVC: KGDrawerViewController!
+    // MARK: - KGFloatingDrawer
+    func prepareDrawer() -> KGDrawerViewController {
+        if drawerVC == nil {
+            drawerVC = KGDrawerViewController()
+        }
+        
+        drawerVC.centerViewController = centerViewController
+        
+        let leftMenuVC = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuTableViewController
+        drawerVC.leftViewController = leftMenuVC
+        
+        return drawerVC
+    }
+    
+    fileprivate var _centerViewController: UIViewController?
+    var centerViewController: UIViewController {
+        get {
+            if let viewController = _centerViewController {
+                return viewController
+            }
+            return storyboard.instantiateViewController(withIdentifier: "MainNavi") as! UINavigationController
+        }
+        set {
+            if let drawerViewController = drawerVC {
+                drawerViewController.closeDrawer(drawerViewController.currentlyOpenedSide, animated: true) { finished in }
+                if drawerViewController.centerViewController != newValue {
+                    drawerViewController.centerViewController = newValue
+                }
+            }
+            _centerViewController = newValue
+        }
+    }
+    
+    func toggleLeftMenu(_ sender:AnyObject, animated:Bool) {
+        drawerVC.toggleDrawer(.left, animated: animated, complete: { _ in
+            
+        })
     }
 }
 
