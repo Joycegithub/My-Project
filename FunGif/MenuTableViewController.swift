@@ -88,5 +88,39 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.row == 0 {
+            
+        } else if indexPath.row == 1 {
+            let mainNaviVC = storyboard?.instantiateViewController(withIdentifier: "MainPageNavi") as! UINavigationController
+            if let appDelegate = appDelegate {
+                appDelegate.centerViewController = mainNaviVC
+            }
+        } else if indexPath.row == 2 {
+            return
+        } else if indexPath.row == 3 {
+            
+        } else if indexPath.row == 4 {
+            
+        } else {
+            
+        }
     }
+    
+//    func prepareVC(_ row: Int) -> UIViewController? {
+//        var identifier = ""
+//        switch row {
+//        case 0:
+//            identifier = "SearchNavi"
+//        case 1:
+//            identifier = "MainPageNavi"
+//        case 2:
+//            identifier = "CategoryNavi"
+//        case 3:
+//            identifier = ""
+//        default:
+//            identifier = ""
+//        }
+//        
+//        return storyboard?.instantiateViewController(withIdentifier: identifier)
+//    }
 }

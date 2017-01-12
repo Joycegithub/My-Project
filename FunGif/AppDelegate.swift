@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let viewController = _centerViewController {
                 return viewController
             }
-            return storyboard.instantiateViewController(withIdentifier: "MainNavi") as! UINavigationController
+            return storyboard.instantiateViewController(withIdentifier: "CategoryNavi") as! UINavigationController
         }
         set {
             if let drawerViewController = drawerVC {

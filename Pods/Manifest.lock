@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.0.1)
+  - ESPullToRefresh (2.2)
+  - Kingfisher (3.1.4)
+  - PKHUD (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.1)
+  - ESPullToRefresh (~> 2.1)
+  - Kingfisher (~> 3.1.3)
+  - PKHUD (~> 4.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  ESPullToRefresh: 67aaf0c5cfc6c3b0396c3d4fa039078c878725d0
+  Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
+  PKHUD: a0ecdee9f67d9b462c0c5e4ba38400292ea6ae6e
+
+PODFILE CHECKSUM: ab64b18f5fb2d8ee8b8ca96f385b840f0a368b92
+
+COCOAPODS: 1.1.1
