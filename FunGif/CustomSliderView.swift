@@ -8,8 +8,12 @@
 
 import UIKit
 
+@objc protocol CustomSliderViewProtocol {
+    @objc func didPressButton(sender: UIButton)
+}
+
 class CustomSliderView: UIView {
-    
+    var delegate: CustomSliderViewProtocol?
     var pointToTop: Bool
     var targetFrame: CGRect
     // Only override draw() if you perform custom drawing.
@@ -96,6 +100,7 @@ class CustomSliderView: UIView {
             
             button.setBackgroundImage(UIImage.imageWith(UIColor.random(), andSize: button.frame.size), for: .normal)
             button.sizeToFit()
+            button.addTarget(self.superview, action: #selector(delegate?.didPressButton(sender:)), for: .touchUpInside)
             
             scrollView.addSubview(button)
         }

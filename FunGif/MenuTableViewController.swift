@@ -80,7 +80,7 @@ class MenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let header = UIView(frame: CGRect(x: 0, y: 0, width: 250, height: 64))
-            header.backgroundColor = UIColor.white
+            header.backgroundColor = UIColor.black
             return header
         }
         return nil
@@ -96,6 +96,10 @@ class MenuTableViewController: UITableViewController {
                 appDelegate.centerViewController = mainNaviVC
             }
         } else if indexPath.row == 2 {
+            let categoryNaviVC = storyboard?.instantiateViewController(withIdentifier: "CategoryNavi") as! UINavigationController
+            if let appDelegate = appDelegate {
+                appDelegate.centerViewController = categoryNaviVC
+            }
             return
         } else if indexPath.row == 3 {
             

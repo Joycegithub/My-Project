@@ -37,16 +37,23 @@ class MainPage: UIViewController {
         let layout = collectionView.collectionViewLayout as! WaterFallLayout
         layout.delegate = self
         
+        var params: [String: Any] = [:]
         var path: String = ""
-        if category.isEmpty {
+        
+        if category.isEmpty || category == "All" {
             path = "trending"
+            params = ["api_key": "dc6zaTOxFJmzC", "limit": 50]
         } else {
-            path = category.replacingOccurrences(of: " ", with: "")
+            path += "search"
+            let q = category.replacingOccurrences(of: " ", with: "+")
+            print(q)
+            params = ["api_key": "dc6zaTOxFJmzC", "limit": 50, "q": q]
         }
+        print(path)
         
-        HUD.show(.labeledProgress(title: "Loading", subtitle: "..."), onView: view)
+        HUD.show(.labeledProgress(title: "Loading", subtitle: "Gifs are loading."), onView: view)
         
-        let request = GifRequest(path: path, params: ["api_key": "dc6zaTOxFJmzC", "limit": 100], method: .get)
+        let request = GifRequest(path: path, params: params, method: .get)
         GifClient().sendRequest(request) { (res, error) in
             if error != nil {
                 print(error!)

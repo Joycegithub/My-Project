@@ -25,6 +25,8 @@ class CategoryViewController: UIViewController {
     
     var customDataSource: CustomDataSource!
     
+    var selectedIndex: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -99,6 +101,7 @@ class CategoryViewController: UIViewController {
                  cell = cellView
                 rect = cellView.convert(cellView.frame, to: self.view)
                 let imageView = cellView.viewWithTag(1) as! MyImageView
+                selectedIndex = IndexPath(row: imageView.tapTag, section: 0)
                 row = imageView.tapTag
             }
             
@@ -117,7 +120,6 @@ class CategoryViewController: UIViewController {
             
             dismissSliderView()
             
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1*0.5, execute: { [unowned self] in
                 let dis = location.y - self.view.bounds.height
                 
@@ -134,6 +136,7 @@ class CategoryViewController: UIViewController {
                 let labels = category["Subcategories"] as! Array<String>
                 
                 self.sliderView = CustomSliderView(frame: sliderRect, labels: labels, pointToTop: pointToTop, targetFrame: rect)
+                self.sliderView?.delegate = self
                 
                 self.view.addSubview(self.sliderView!)
                 self.collectionView.isScrollEnabled = false
@@ -180,12 +183,22 @@ class CategoryViewController: UIViewController {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Select \(indexPath.row)")
+        print("Select \(indexPath.row) \(self.datas[indexPath.row]["Category_Name"])")
+        
+        let mainNaviVC = storyboard?.instantiateViewController(withIdentifier: "MainPageNavi") as! UINavigationController
+        if let mainpage = mainNaviVC.viewControllers.first as? MainPage {
+            mainpage.category = self.datas[indexPath.row]["Category_Name"] as! String
+        }
+        if let appDelegate = appDelegate {
+            
+            appDelegate.centerViewController = mainNaviVC
+        }
+
     }
 }
 
 
-// MARK: - Extensing UICollectionViewFlowLayout 
+// MARK: - Extensing UICollectionViewFlowLayout
 
 extension CategoryViewController: UICollectionViewDelegateFlowLayout {
     
@@ -210,4 +223,24 @@ extension CategoryViewController: UIScrollViewDelegate {
 // MARK: Class Define MyImageView For tapTag Property
 open class MyImageView: UIImageView {
     var tapTag: Int = 0
+}
+
+// MARK: Extension for CustomSliderView
+
+extension CategoryViewController: CustomSliderViewProtocol {
+    func didPressButton(sender: UIButton) {
+        
+        print("taptag: \(selectedIndex?.row)! tag: \(sender.tag)")
+        dismissSliderView()
+        
+        let mainNaviVC = storyboard?.instantiateViewController(withIdentifier: "MainPageNavi") as! UINavigationController
+        if let mainpage = mainNaviVC.viewControllers.first as? MainPage {
+            let category = self.datas[selectedIndex!.row]
+            let subcategories = category["Subcategories"] as! Array<String>
+            mainpage.category = subcategories[sender.tag-1];
+        }
+        if let appDelegate = appDelegate {
+            appDelegate.centerViewController = mainNaviVC
+        }
+    }
 }

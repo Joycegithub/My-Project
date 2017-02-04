@@ -15,6 +15,7 @@ struct GifClient: Client {
     func sendRequest<T : Request>(_ r: T, completionHandler: @escaping ([T.Response?], NSError?) -> Void) {
         
         let url = host.appending(r.path)
+        print(url)
         
         Alamofire.request(url, method: r.method, parameters: r.params, encoding: URLEncoding.default, headers: nil).validate().responseJSON { (responseJSON) in
             
@@ -27,14 +28,14 @@ struct GifClient: Client {
             
             guard let json = responseJSON.result.value as? [String: Any] else {
                 DispatchQueue.main.async {
-                    completionHandler([], NSError(domain: "Connection Error", code: 909, userInfo: nil))
+                    completionHandler([], NSError(domain: "Connection Error", code: 908, userInfo: nil))
                 }
                 return
             }
             
             guard let datas = json["data"] as? [[String: Any]] else {
                 DispatchQueue.main.async {
-                    completionHandler([], NSError(domain: "Connection Error", code: 909, userInfo: nil))
+                    completionHandler([], NSError(domain: "Connection Error", code: 907, userInfo: nil))
                 }
                 return
             }
