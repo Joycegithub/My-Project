@@ -24,13 +24,13 @@ struct Gif {
             return nil
         }
         
-        guard let fixed_height_downsampled = images["fixed_height_downsampled"] as? [String: Any] else {
+        guard let image = images[userChoice as! String] as? [String: Any] else {
             return nil
         }
         
-        guard let urlStr = fixed_height_downsampled["url"] as? String,
-                let widthStr = fixed_height_downsampled["width"] as? String,
-                let heightStr = fixed_height_downsampled["height"] as? String
+        guard let urlStr = image["url"] as? String,
+                let widthStr = image["width"] as? String,
+                let heightStr = image["height"] as? String
             else {
             return nil
         }

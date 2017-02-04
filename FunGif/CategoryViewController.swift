@@ -75,6 +75,13 @@ class CategoryViewController: UIViewController {
         }
     }
     
+    @IBAction func question(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "提示", message: "长按分类可以打开细分类界面", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - Dismiss Slider View
     
     func dismissSliderView() {

@@ -10,7 +10,7 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
 
-    private let menuStrs = ["Search", "Trending", "Categories", "Marked", "Upload", "Setting"]
+    private let menuStrs = ["Search - x", "Trending", "Categories", "Marked - x", "Upload - x", "Setting"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -53,14 +53,20 @@ class MenuTableViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             image = UIImage(named: "search")
+            cell.isUserInteractionEnabled = false
+            cell.backgroundColor = UIColor.gray
         case 1:
             image = UIImage(named: "trending-up")
         case 2:
             image = UIImage(named: "category")
         case 3:
             image = UIImage(named: "favorite")
+            cell.isUserInteractionEnabled = false
+            cell.backgroundColor = UIColor.gray
         case 4:
             image = UIImage(named: "upload")
+            cell.isUserInteractionEnabled = false
+            cell.backgroundColor = UIColor.gray
         default:
             image = UIImage(named: "setting")
         }
@@ -106,7 +112,10 @@ class MenuTableViewController: UITableViewController {
         } else if indexPath.row == 4 {
             
         } else {
-            
+            let settingNaviVc = storyboard?.instantiateViewController(withIdentifier: "SettingNavi") as! UINavigationController
+            if let appDelegate = appDelegate {
+                appDelegate.centerViewController = settingNaviVc
+            }
         }
     }
     

@@ -10,6 +10,10 @@
 		089A5FB0E601FE4A631A05AA /* Pods_FunGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B775513AF02DB5BFFA2CCADC /* Pods_FunGif.framework */; };
 		2C964C6396819326AA159A7D /* Pods_FunGifTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB58767441B63FCC2511C621 /* Pods_FunGifTests.framework */; };
 		3E2B0C3127F8EDC98CCFA5B4 /* Pods_FunGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039550745495A4F31BDDA2C2 /* Pods_FunGif.framework */; };
+		AAC25F671E45AC3D00A87928 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC25F621E45AC3D00A87928 /* libWeChatSDK.a */; };
+		AAC25F681E45AC3D00A87928 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = AAC25F631E45AC3D00A87928 /* README.txt */; };
+		AAC25F6B1E45AC6400A87928 /* HeaderBridging.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC25F6A1E45AC6400A87928 /* HeaderBridging.m */; };
+		AAC25F6E1E45C51900A87928 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC25F6D1E45C51900A87928 /* SettingViewController.swift */; };
 		AB1E5ABD1DFF82D100135A9F /* laughing.gif in Resources */ = {isa = PBXBuildFile; fileRef = AB1E5A8E1DFF82D100135A9F /* laughing.gif */; };
 		AB1E5ABE1DFF82D100135A9F /* blackandwhite.gif in Resources */ = {isa = PBXBuildFile; fileRef = AB1E5A901DFF82D100135A9F /* blackandwhite.gif */; };
 		AB1E5ABF1DFF82D100135A9F /* goat.gif in Resources */ = {isa = PBXBuildFile; fileRef = AB1E5A921DFF82D100135A9F /* goat.gif */; };
@@ -94,6 +98,14 @@
 		5409F9F66354E6FD7DF6E009 /* Pods-FunGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunGif.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunGif/Pods-FunGif.release.xcconfig"; sourceTree = "<group>"; };
 		695378BE647C3983DC734D65 /* Pods-FunGifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunGifTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunGifTests/Pods-FunGifTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A73A8633815FFC61E110AE0 /* Pods_FunGifTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunGifTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC25F621E45AC3D00A87928 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		AAC25F631E45AC3D00A87928 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		AAC25F641E45AC3D00A87928 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		AAC25F651E45AC3D00A87928 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		AAC25F661E45AC3D00A87928 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		AAC25F691E45AC6400A87928 /* FunGif-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunGif-Bridging-Header.h"; sourceTree = "<group>"; };
+		AAC25F6A1E45AC6400A87928 /* HeaderBridging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderBridging.m; sourceTree = "<group>"; };
+		AAC25F6D1E45C51900A87928 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		AB1E5A8E1DFF82D100135A9F /* laughing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = laughing.gif; sourceTree = "<group>"; };
 		AB1E5A901DFF82D100135A9F /* blackandwhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = blackandwhite.gif; sourceTree = "<group>"; };
 		AB1E5A921DFF82D100135A9F /* goat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = goat.gif; sourceTree = "<group>"; };
@@ -171,6 +183,7 @@
 			files = (
 				AB680F391DAFB645001AFA95 /* SystemConfiguration.framework in Frameworks */,
 				AB680F371DAFB63D001AFA95 /* libz.tbd in Frameworks */,
+				AAC25F671E45AC3D00A87928 /* libWeChatSDK.a in Frameworks */,
 				AB680F351DAFB633001AFA95 /* libsqlite3.0.tbd in Frameworks */,
 				AB680F331DAFB629001AFA95 /* libc++.tbd in Frameworks */,
 				AB680F311DAFB55C001AFA95 /* CoreTelephony.framework in Frameworks */,
@@ -222,6 +235,28 @@
 			);
 			name = Frameworks;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		AAC25F611E45AC3D00A87928 /* OpenSDK1.7.5 */ = {
+			isa = PBXGroup;
+			children = (
+				AAC25F621E45AC3D00A87928 /* libWeChatSDK.a */,
+				AAC25F631E45AC3D00A87928 /* README.txt */,
+				AAC25F641E45AC3D00A87928 /* WechatAuthSDK.h */,
+				AAC25F651E45AC3D00A87928 /* WXApi.h */,
+				AAC25F661E45AC3D00A87928 /* WXApiObject.h */,
+				AAC25F6A1E45AC6400A87928 /* HeaderBridging.m */,
+				AAC25F691E45AC6400A87928 /* FunGif-Bridging-Header.h */,
+			);
+			path = OpenSDK1.7.5;
+			sourceTree = "<group>";
+		};
+		AAC25F6C1E45C50400A87928 /* 设置页面 */ = {
+			isa = PBXGroup;
+			children = (
+				AAC25F6D1E45C51900A87928 /* SettingViewController.swift */,
+			);
+			name = "设置页面";
 			sourceTree = "<group>";
 		};
 		AB1E5A8C1DFF82D100135A9F /* gifs */ = {
@@ -478,6 +513,7 @@
 				ABA3A7A51E0801A800CAB1CF /* 分类页面 */,
 				ABA3A7A71E08049400CAB1CF /* 主页面 */,
 				AB71A8DE1E0B77C400C8D9E8 /* 搜索页面 */,
+				AAC25F6C1E45C50400A87928 /* 设置页面 */,
 				AB5817041DFE1AC500C3D4B6 /* CollectionViewDataSource */,
 				ABE045141E0AA05D00FCF4B4 /* Network */,
 				AB28438C1DA724E100650ACA /* Main.storyboard */,
@@ -631,6 +667,7 @@
 		ABD5A1931DFD4E810078DCE6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				AAC25F611E45AC3D00A87928 /* OpenSDK1.7.5 */,
 				AB2843861DA724E100650ACA /* Products */,
 				ED8BD0AE229F37B29D1C2EB7 /* Pods */,
 				0C28DD1D2D3A20FBC4F2EE06 /* Frameworks */,
@@ -766,7 +803,7 @@
 					AB2843841DA724E100650ACA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WK6WD64FDN;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					AB2843981DA724E100650ACA = {
@@ -822,6 +859,7 @@
 				AB28438E1DA724E100650ACA /* Main.storyboard in Resources */,
 				ABA58EC21DFECF4000F0FFF2 /* Categories.plist in Resources */,
 				AB1E5AD41DFF82D100135A9F /* gameofthrones.gif in Resources */,
+				AAC25F681E45AC3D00A87928 /* README.txt in Resources */,
 				AB1E5ACD1DFF82D100135A9F /* rihanna.gif in Resources */,
 				AB1E5AC41DFF82D100135A9F /* 80s.gif in Resources */,
 				AB1E5AC21DFF82D100135A9F /* minions.gif in Resources */,
@@ -960,6 +998,7 @@
 				ABE045181E0AA0F900FCF4B4 /* Request.swift in Sources */,
 				AB2F66551E0AC4A300430E80 /* GifCell.swift in Sources */,
 				ABF92ED91DFD731300700D50 /* KGDrawerSpringAnimator.swift in Sources */,
+				AAC25F6B1E45AC6400A87928 /* HeaderBridging.m in Sources */,
 				ABE0451E1E0AA24200FCF4B4 /* GifClient.swift in Sources */,
 				ABA3A7AD1E08061800CAB1CF /* WaterFallLayout.swift in Sources */,
 				ABE045161E0AA07700FCF4B4 /* Decodable.swift in Sources */,
@@ -973,6 +1012,7 @@
 				AB5817021DFE0D4200C3D4B6 /* MenuCell.swift in Sources */,
 				AB71A8E01E0B77D500C8D9E8 /* SearchViewController.swift in Sources */,
 				AB2843891DA724E100650ACA /* AppDelegate.swift in Sources */,
+				AAC25F6E1E45C51900A87928 /* SettingViewController.swift in Sources */,
 				ABF92EDB1DFD731300700D50 /* KGDrawerViewController.swift in Sources */,
 				AB5817061DFE1AE400C3D4B6 /* CustomDataSource.swift in Sources */,
 				ABE045131E0A9DCF00FCF4B4 /* Gif.swift in Sources */,
@@ -1076,6 +1116,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1120,6 +1164,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -1132,6 +1180,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WK6WD64FDN;
 				INFOPLIST_FILE = FunGif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1139,11 +1188,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FunGif",
+					"$(PROJECT_DIR)/FunGif/OpenSDK1.7.5",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.richy.FunGif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FunGif/OpenSDK1.7.5/FunGif-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1154,6 +1206,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WK6WD64FDN;
 				INFOPLIST_FILE = FunGif/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1161,11 +1214,13 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FunGif",
+					"$(PROJECT_DIR)/FunGif/OpenSDK1.7.5",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.richy.FunGif;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FunGif/OpenSDK1.7.5/FunGif-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rGB-BB-HNc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rGB-BB-HNc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vSR-Oj-ymK" id="UpY-Js-mUy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -135,9 +135,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qRW-MW-CCN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="fastForward" id="mLC-OZ-Hj6">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="mLC-OZ-Hj6">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="menuClicked:" destination="vAQ-cw-qMy" id="qhv-k7-8nx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="question" id="XbZ-Qj-Gop">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="question:" destination="vAQ-cw-qMy" id="lTI-zp-lSM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -204,7 +211,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EUW-Mp-0bO">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="1Ab-mi-7ff">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="1Ab-mi-7ff">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="menuClicked:" destination="scm-Kc-wGr" id="SGl-G5-ISd"/>
                             </connections>
@@ -312,6 +320,75 @@
             </objects>
             <point key="canvasLocation" x="377" y="391"/>
         </scene>
+        <!--Setting-->
+        <scene sceneID="DnE-c2-ezV">
+            <objects>
+                <tableViewController id="zTn-nw-t6W" customClass="SettingViewController" customModule="FunGif" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qHU-05-BzA">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CacheCell" rowHeight="60" id="hNP-5M-VNt">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hNP-5M-VNt" id="O43-9e-Rve">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7L-99-VI6">
+                                            <rect key="frame" x="0.0" y="5" width="375" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="清理缓存">
+                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N7L-99-VI6" firstAttribute="top" secondItem="O43-9e-Rve" secondAttribute="top" constant="5" id="Gb1-lu-WSg"/>
+                                        <constraint firstAttribute="trailing" secondItem="N7L-99-VI6" secondAttribute="trailing" id="bgL-Kg-Emh"/>
+                                        <constraint firstItem="N7L-99-VI6" firstAttribute="leading" secondItem="O43-9e-Rve" secondAttribute="leading" id="r6P-BA-VJl"/>
+                                        <constraint firstAttribute="bottom" secondItem="N7L-99-VI6" secondAttribute="bottom" constant="5" id="tyo-sS-7WX"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zTn-nw-t6W" id="gkZ-Ae-hga"/>
+                            <outlet property="delegate" destination="zTn-nw-t6W" id="1MW-sr-LNb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Setting" id="BvJ-2L-HOZ">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="E35-hq-fLv">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="menuClicked:" destination="zTn-nw-t6W" id="Nfe-3T-Ta4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAk-SB-DXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="1075"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mKs-d9-52S">
+            <objects>
+                <navigationController storyboardIdentifier="SettingNavi" useStoryboardIdentifierAsRestorationIdentifier="YES" id="W4m-wX-rOU" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="jqX-hS-N5U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zTn-nw-t6W" kind="relationship" relationship="rootViewController" id="ODS-1e-Ng9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ep5-5A-dyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="1075"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="JBh-rX-Agw">
             <objects>
@@ -332,6 +409,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="menu" width="42" height="32"/>
+        <image name="question" width="32" height="32"/>
         <image name="search" width="20" height="20"/>
     </resources>
 </document>

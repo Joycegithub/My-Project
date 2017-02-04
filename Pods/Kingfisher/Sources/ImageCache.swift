@@ -98,7 +98,7 @@ open class ImageCache {
     /// The largest disk size can be taken for the cache. It is the total 
     /// allocated size of cached files in bytes.
     /// Default is no limit.
-    open var maxDiskCacheSize: UInt = 0
+    open var maxDiskCacheSize: UInt = 50 * 1024 * 1024
     
     fileprivate let processQueue: DispatchQueue
     

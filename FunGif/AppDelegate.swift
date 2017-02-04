@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
+import PKHUD
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
 
     var window: UIWindow?
 
@@ -18,6 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = prepareDrawer()
         window!.makeKeyAndVisible()
+        
+        KingfisherManager.shared.cache.pathExtension = "gif"
+        
+        WXApi.registerApp("wxa8a702e72afa19e2")
+        
+        if (userChoice == nil) {
+            UserDefaults.standard.set(normal_size, forKey: user_choice_size)
+        }
+        
+        print(userChoice)
         
         return true
     }
@@ -42,6 +54,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        return WXApi.handleOpen(url, delegate: self)
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return WXApi.handleOpen(url, delegate: self)
+    }
+    
+    func onReq(_ req: BaseReq!) {
+        //onReq是微信终端向第三方程序发起请求，要求第三方程序响应。第三方程序响应完后必须调用sendRsp返回。在调用sendRsp返回时，会切回到微信终端程序界面。
+    }
+    func onResp(_ resp: BaseResp!) {
+        //如果第三方程序向微信发送了sendReq的请求，那么onResp会被回调。sendReq请求调用后，会切到微信终端程序界面。
+        HUD.show(.labeledSuccess(title: "分享成功", subtitle: ""))
+        HUD.hide(afterDelay: 1)
     }
 
     var drawerVC: KGDrawerViewController!
